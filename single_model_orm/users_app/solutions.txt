@@ -1,0 +1,17 @@
+User.objects.create(first_name="Dylan", last_name="Murphy", email_address="dylan@murphy.com", age="25")
+User.objects.create(first_name="Zara", last_name="King", email_address="zara@king.com", age="24")
+User.objects.create(first_name="Greg", last_name="Fitz", email_address="gfitz@gerald.com", age="50")
+
+User.objects.all()
+
+User.objects.last()
+
+User.objects.first()
+
+user3 = User.objects.get(id='3')
+user3.lastname = "pancakes"
+user3.save()
+
+user2 = User.objects.get(id='2')
+
+User.objects.all().order_by("first_name")
